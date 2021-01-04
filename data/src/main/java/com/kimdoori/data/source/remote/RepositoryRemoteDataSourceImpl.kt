@@ -7,7 +7,6 @@ class RepositoryRemoteDataSourceImpl(
     private val api: RepositoryService
 ) : RepositoryRemoteDataSource {
 
-    // TODO: 모델 변환
     override fun getRepositoryList(userName: String): Single<List<RepositoryResponse>> =
         api.getRepositoryList(userName)
 }
