@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "com.fasterxml.jackson.core:jackson-core:$jackson_version"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "io.reactivex.rxjava3:rxjava:3.0.9"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
