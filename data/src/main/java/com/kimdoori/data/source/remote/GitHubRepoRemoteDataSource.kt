@@ -5,5 +5,5 @@ import io.reactivex.rxjava3.core.Single
 
 interface GitHubRepoRemoteDataSource {
 
-    fun getGitHubRepoList(userName: String): Single<List<GitHubRepoResponse>>
+    fun fetchGitHubRepoList(userName: String): Single<List<GitHubRepoResponse>>
 }

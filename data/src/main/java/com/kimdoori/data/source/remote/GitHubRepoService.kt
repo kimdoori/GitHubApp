@@ -8,7 +8,7 @@ import retrofit2.http.Path
 interface GitHubRepoService {
 
     @GET("users/{user}/repos")
-    fun getGitHubRepoList(
+    fun fetchGitHubRepoList(
         @Path("user") userName: String
     ): Single<List<GitHubRepoResponse>>
 }

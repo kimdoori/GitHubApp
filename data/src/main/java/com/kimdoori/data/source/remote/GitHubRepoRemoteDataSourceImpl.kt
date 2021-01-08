@@ -7,6 +7,6 @@ class GitHubRepoRemoteDataSourceImpl(
     private val gitHubRepoService: GitHubRepoService
 ) : GitHubRepoRemoteDataSource {
 
-    override fun getGitHubRepoList(userName: String): Single<List<GitHubRepoResponse>> =
-        gitHubRepoService.getGitHubRepoList(userName)
+    override fun fetchGitHubRepoList(userName: String): Single<List<GitHubRepoResponse>> =
+        gitHubRepoService.fetchGitHubRepoList(userName)
 }
