@@ -2,7 +2,7 @@ package com.kimdoori.data.source.entity
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class RepositoryResponse(
+data class GitHubRepoResponse(
     @JsonProperty("id") val id: Int,
     @JsonProperty("name") val name: String,
     @JsonProperty("full_name") val fullName: String,
