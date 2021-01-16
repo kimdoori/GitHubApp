@@ -1,15 +1,12 @@
 plugins {
-    id 'java-library'
-    id 'kotlin'
+    id 'com.android.library'
 }
+
+apply from: "$rootDir/common.gradle"
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "com.fasterxml.jackson.core:jackson-core:$jackson_version"
-    implementation "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    implementation "io.reactivex.rxjava3:rxjava:3.0.9"
+    implementation JacksonDependency.JACKSON_CORE
+    implementation JacksonDependency.JACKSON_ANNOTATIONS
+    implementation RetrofitDependency.RETROFIT
+    implementation RxJavaDependency.RXJAVA
 }
-
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
