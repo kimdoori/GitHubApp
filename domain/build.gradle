@@ -6,6 +6,4 @@ apply from: "$rootDir/common.gradle"
 
 dependencies {
     implementation project(":data")
-
-    implementation RxJavaDependency.RXJAVA
 }
