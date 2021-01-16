@@ -24,13 +24,6 @@ object AndroidXDependency {
     const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
 }
 
-object JacksonDependency {
-    private const val VERSION = "2.11.2"
-
-    const val JACKSON_CORE = "com.fasterxml.jackson.core:jackson-core:$VERSION"
-    const val JACKSON_ANNOTATIONS = "com.fasterxml.jackson.core:jackson-annotations:$VERSION"
-}
-
 object MoshiDependency {
     const val MOSHI = "com.squareup.moshi:moshi:1.11.0"
 }
