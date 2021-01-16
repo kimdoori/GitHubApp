@@ -1,13 +1,11 @@
 plugins {
-    id 'java-library'
-    id 'kotlin'
+    id 'com.android.library'
 }
+
+apply from: "$rootDir/common.gradle"
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "io.reactivex.rxjava3:rxjava:3.0.9"
-    api project(":data")
-}
+    implementation project(":data")
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+    implementation RxJavaDependency.RXJAVA
+}
