@@ -10,14 +10,12 @@ data class GitHubRepo(
     val url: String
 ) {
     companion object {
-        fun mapFromEntity(gitHubRepoResponse: GitHubRepoResponse): GitHubRepo {
-            return GitHubRepo(
-                id = gitHubRepoResponse.id,
-                name = gitHubRepoResponse.name,
-                fullName = gitHubRepoResponse.fullName,
-                description = gitHubRepoResponse.description,
-                url = gitHubRepoResponse.url
-            )
-        }
+        fun mapFromEntity(gitHubRepoResponse: GitHubRepoResponse) = GitHubRepo(
+            id = gitHubRepoResponse.id,
+            name = gitHubRepoResponse.name,
+            fullName = gitHubRepoResponse.fullName,
+            description = gitHubRepoResponse.description,
+            url = gitHubRepoResponse.url
+        )
     }
 }
