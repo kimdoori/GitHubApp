@@ -20,8 +20,8 @@ object KotlinDependency {
 }
 
 object AndroidXDependency {
-    const val ANDROIDX_APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
-    const val ANDROIDX_CORE = "androidx.core:core-ktx:1.3.2"
+    const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
+    const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
 }
 
 object JacksonDependency {

@@ -32,8 +32,8 @@ android {
 
 dependencies {
     implementation KotlinDependency.KOTLIN_STDLIB
-    implementation AndroidXDependency.ANDROIDX_CORE
-    implementation AndroidXDependency.ANDROIDX_APPCOMPAT
+    implementation AndroidXDependency.CORE_KTX
+    implementation AndroidXDependency.APPCOMPAT
 
     testImplementation TestDependency.JUNIT
 
