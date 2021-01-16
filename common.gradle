@@ -35,8 +35,8 @@ dependencies {
     implementation AndroidXDependency.ANDROIDX_CORE
     implementation AndroidXDependency.ANDROIDX_APPCOMPAT
 
-    testImplementation JUnitDependency.JUNIT
+    testImplementation TestDependency.JUNIT
 
-    androidTestImplementation AndroidXDependency.ANDROIDX_TEST_EXT
-    androidTestImplementation AndroidXDependency.ANDROIDX_TEST_ESPRESSO
+    androidTestImplementation TestDependency.EXT_JUNIT
+    androidTestImplementation TestDependency.ESPRESSO_CORE
 }
