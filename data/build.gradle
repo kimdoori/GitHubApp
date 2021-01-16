@@ -8,5 +8,4 @@ dependencies {
     implementation JacksonDependency.JACKSON_CORE
     implementation JacksonDependency.JACKSON_ANNOTATIONS
     implementation RetrofitDependency.RETROFIT
-    implementation RxJavaDependency.RXJAVA
 }
