@@ -5,6 +5,7 @@ plugins {
 apply from: "$rootDir/common.gradle"
 
 dependencies {
+    implementation project(":data")
+
     implementation RxJavaDependency.RXJAVA
-    api project(":data")
 }
