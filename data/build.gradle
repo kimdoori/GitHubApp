@@ -5,7 +5,8 @@ plugins {
 apply from: "$rootDir/common.gradle"
 
 dependencies {
-    implementation JacksonDependency.JACKSON_CORE
+    implementation MoshiDependency.MOSHI
     implementation JacksonDependency.JACKSON_ANNOTATIONS
+    implementation RetrofitDependency.CONVERTER_MOSHI
     implementation RetrofitDependency.RETROFIT
 }

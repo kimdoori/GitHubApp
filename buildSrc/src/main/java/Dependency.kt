@@ -31,8 +31,13 @@ object JacksonDependency {
     const val JACKSON_ANNOTATIONS = "com.fasterxml.jackson.core:jackson-annotations:$VERSION"
 }
 
+object MoshiDependency {
+    const val MOSHI = "com.squareup.moshi:moshi:1.11.0"
+}
+
 object RetrofitDependency {
     const val RETROFIT = "com.squareup.retrofit2:retrofit:2.9.0"
+    const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:2.7.0"
 }
 
 object RxJavaDependency {
