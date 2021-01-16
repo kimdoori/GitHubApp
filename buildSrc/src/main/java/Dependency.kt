@@ -35,19 +35,13 @@ object JacksonDependency {
 }
 
 object RetrofitDependency {
-    private const val VERSION = "2.9.0"
-
-    const val RETROFIT = "com.squareup.retrofit2:retrofit:$VERSION"
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:2.9.0"
 }
 
 object RxJavaDependency {
-    private const val VERSION = "3.0.9"
-
-    const val RXJAVA = "io.reactivex.rxjava3:rxjava:$VERSION"
+    const val RXJAVA = "io.reactivex.rxjava3:rxjava:3.0.9"
 }
 
 object JUnitDependency {
-    private const val VERSION = "4.13.1"
-
-    const val JUNIT = "junit:junit:$VERSION"
+    const val JUNIT = "junit:junit:4.13.1"
 }
