@@ -2,7 +2,7 @@ package model
 
 import com.kimdoori.data.source.entity.GitHubRepoResponse
 
-data class GitHubRepo(
+data class GitHubRepoModel(
     val id: Int,
     val name: String,
     val fullName: String,
@@ -10,7 +10,7 @@ data class GitHubRepo(
     val url: String
 ) {
     companion object {
-        fun mapFromEntity(gitHubRepoResponse: GitHubRepoResponse) = GitHubRepo(
+        fun mapFromEntity(gitHubRepoResponse: GitHubRepoResponse) = GitHubRepoModel(
             id = gitHubRepoResponse.id,
             name = gitHubRepoResponse.name,
             fullName = gitHubRepoResponse.fullName,
