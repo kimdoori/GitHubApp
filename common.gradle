@@ -1,0 +1,42 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion ProjectConfig.COMPILE_TARGET_SDK_VERSION
+
+    defaultConfig {
+        minSdkVersion ProjectConfig.MIN_SDK_VERSION
+        targetSdkVersion ProjectConfig.COMPILE_TARGET_SDK_VERSION
+        versionCode ProjectConfig.VERSION_CODE
+        versionName ProjectConfig.VERSION_NAME
+
+        testInstrumentationRunner ProjectConfig.TEST_INSTRUMENTATION_RUNNER
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation KotlinDependency.KOTLIN_STDLIB
+    implementation AndroidXDependency.ANDROIDX_CORE
+    implementation AndroidXDependency.ANDROIDX_APPCOMPAT
+
+    testImplementation JUnitDependency.JUNIT
+
+    androidTestImplementation AndroidXDependency.ANDROIDX_TEST_EXT
+    androidTestImplementation AndroidXDependency.ANDROIDX_TEST_ESPRESSO
+}
