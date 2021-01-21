@@ -24,6 +24,14 @@ object AndroidXDependency {
     const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
 }
 
+object HiltDependency {
+    private const val VERSION = "2.28-alpha"
+
+    const val HILT = "com.google.dagger:hilt-android:$VERSION"
+    const val COMPILER = "com.google.dagger:hilt-android-compiler:$VERSION"
+    const val GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$VERSION"
+}
+
 object MoshiDependency {
     const val MOSHI = "com.squareup.moshi:moshi:1.11.0"
 }
