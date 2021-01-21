@@ -37,8 +37,10 @@ object MoshiDependency {
 }
 
 object RetrofitDependency {
-    const val RETROFIT = "com.squareup.retrofit2:retrofit:2.9.0"
-    const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:2.7.0"
+    private const val VERSION = "2.9.0"
+
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:$VERSION"
+    const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:$VERSION"
 }
 
 object RxJavaDependency {
