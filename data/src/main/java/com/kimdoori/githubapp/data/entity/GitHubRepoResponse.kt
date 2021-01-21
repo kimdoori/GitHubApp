@@ -1,4 +1,4 @@
-package com.kimdoori.data.source.entity
+package com.kimdoori.githubapp.data.entity
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

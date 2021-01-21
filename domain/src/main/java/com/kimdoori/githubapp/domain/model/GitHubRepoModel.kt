@@ -1,6 +1,6 @@
-package model
+package com.kimdoori.githubapp.domain.model
 
-import com.kimdoori.data.source.entity.GitHubRepoResponse
+import com.kimdoori.githubapp.data.entity.GitHubRepoResponse
 
 data class GitHubRepoModel(
     val id: Int,

@@ -1,6 +1,6 @@
-package com.kimdoori.data.source.remote
+package com.kimdoori.githubapp.data.remote
 
-import com.kimdoori.data.source.entity.GitHubRepoResponse
+import com.kimdoori.githubapp.data.entity.GitHubRepoResponse
 import io.reactivex.rxjava3.core.Single
 
 interface GitHubRepoRemoteDataSource {
