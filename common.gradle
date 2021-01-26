@@ -33,17 +33,19 @@ android {
 
 dependencies {
     implementation KotlinDependency.KOTLIN_STDLIB
+
     implementation AndroidXDependency.CORE_KTX
     implementation AndroidXDependency.APPCOMPAT
+
     implementation RxJavaDependency.RXJAVA
+
     implementation HiltDependency.HILT
+    kapt HiltDependency.COMPILER
+
     implementation RetrofitDependency.CONVERTER_MOSHI
     implementation RetrofitDependency.ADAPTER_RXJAVA3
 
-    kapt HiltDependency.COMPILER
-
     testImplementation TestDependency.JUNIT
-
     androidTestImplementation TestDependency.EXT_JUNIT
     androidTestImplementation TestDependency.ESPRESSO_CORE
 }
