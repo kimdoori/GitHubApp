@@ -25,7 +25,7 @@ object AndroidXDependency {
 }
 
 object HiltDependency {
-    private const val VERSION = "2.28-alpha"
+    private const val VERSION = "2.31.1-alpha"
 
     const val HILT = "com.google.dagger:hilt-android:$VERSION"
     const val COMPILER = "com.google.dagger:hilt-android-compiler:$VERSION"
