@@ -24,13 +24,24 @@ object AndroidXDependency {
     const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
 }
 
+object HiltDependency {
+    private const val VERSION = "2.31.1-alpha"
+
+    const val HILT = "com.google.dagger:hilt-android:$VERSION"
+    const val COMPILER = "com.google.dagger:hilt-android-compiler:$VERSION"
+    const val GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$VERSION"
+}
+
 object MoshiDependency {
     const val MOSHI = "com.squareup.moshi:moshi:1.11.0"
 }
 
 object RetrofitDependency {
-    const val RETROFIT = "com.squareup.retrofit2:retrofit:2.9.0"
-    const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:2.7.0"
+    private const val VERSION = "2.9.0"
+
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:$VERSION"
+    const val CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:$VERSION"
+    const val ADAPTER_RXJAVA3 = "com.squareup.retrofit2:adapter-rxjava3:$VERSION"
 }
 
 object RxJavaDependency {

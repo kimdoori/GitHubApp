@@ -1,5 +1,6 @@
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion ProjectConfig.COMPILE_TARGET_SDK_VERSION
@@ -32,12 +33,19 @@ android {
 
 dependencies {
     implementation KotlinDependency.KOTLIN_STDLIB
+
     implementation AndroidXDependency.CORE_KTX
     implementation AndroidXDependency.APPCOMPAT
+
     implementation RxJavaDependency.RXJAVA
 
-    testImplementation TestDependency.JUNIT
+    implementation HiltDependency.HILT
+    kapt HiltDependency.COMPILER
 
+    implementation RetrofitDependency.CONVERTER_MOSHI
+    implementation RetrofitDependency.ADAPTER_RXJAVA3
+
+    testImplementation TestDependency.JUNIT
     androidTestImplementation TestDependency.EXT_JUNIT
     androidTestImplementation TestDependency.ESPRESSO_CORE
 }

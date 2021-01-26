@@ -6,6 +6,5 @@ apply from: "$rootDir/common.gradle"
 
 dependencies {
     implementation MoshiDependency.MOSHI
-    implementation RetrofitDependency.CONVERTER_MOSHI
     implementation RetrofitDependency.RETROFIT
 }

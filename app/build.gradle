@@ -9,3 +9,7 @@ android {
         applicationId ProjectConfig.APP_ID
     }
 }
+
+dependencies {
+    implementation project(":domain")
+}
