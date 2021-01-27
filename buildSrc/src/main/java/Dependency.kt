@@ -25,11 +25,12 @@ object AndroidXDependency {
 }
 
 object HiltDependency {
-    private const val VERSION = "2.31.1-alpha"
+    private const val ANDROID_VERSION = "2.31.1-alpha"
 
-    const val HILT = "com.google.dagger:hilt-android:$VERSION"
-    const val COMPILER = "com.google.dagger:hilt-android-compiler:$VERSION"
-    const val GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$VERSION"
+    const val ANDROID = "com.google.dagger:hilt-android:$ANDROID_VERSION"
+    const val ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:$ANDROID_VERSION"
+
+    const val GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$ANDROID_VERSION"
 }
 
 object MoshiDependency {

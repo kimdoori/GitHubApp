@@ -39,8 +39,8 @@ dependencies {
 
     implementation RxJavaDependency.RX_ANDROID
 
-    implementation HiltDependency.HILT
-    kapt HiltDependency.COMPILER
+    implementation HiltDependency.ANDROID
+    kapt HiltDependency.ANDROID_COMPILER
 
     implementation RetrofitDependency.CONVERTER_MOSHI
     implementation RetrofitDependency.ADAPTER_RXJAVA3
