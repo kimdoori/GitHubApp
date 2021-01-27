@@ -8,6 +8,10 @@ android {
     defaultConfig {
         applicationId ProjectConfig.APP_ID
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
