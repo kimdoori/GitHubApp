@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         setupBinding()
         setupRecyclerView()
+        showContent()
     }
 
     private fun setupBinding() {
@@ -32,5 +33,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         binding.mainRepoRecyclerView.adapter = GitHubRepoAdapter()
+    }
+
+    private fun showContent() {
+        viewModel.fetchGitHubRepoList(userName = "kimdoori")
     }
 }
