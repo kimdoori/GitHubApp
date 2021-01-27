@@ -12,4 +12,6 @@ android {
 
 dependencies {
     implementation project(":domain")
+    implementation AndroidXDependency.ACTIVITY_KTX
+    implementation AndroidXDependency.LIFECYCLE_EXTENSIONS
 }

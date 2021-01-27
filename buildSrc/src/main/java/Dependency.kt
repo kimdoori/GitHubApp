@@ -22,10 +22,16 @@ object KotlinDependency {
 object AndroidXDependency {
     const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
     const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
+    const val ACTIVITY_KTX = "androidx.activity:activity-ktx:1.2.0-beta01"
+    const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 }
 
 object HiltDependency {
+    private const val VERSION = "1.0.0-alpha02"
     private const val ANDROID_VERSION = "2.31.1-alpha"
+
+    const val LIFECYCLE_VIEWMODEL = "androidx.hilt:hilt-lifecycle-viewmodel:$VERSION"
+    const val COMPILER = "androidx.hilt:hilt-compiler:$VERSION"
 
     const val ANDROID = "com.google.dagger:hilt-android:$ANDROID_VERSION"
     const val ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:$ANDROID_VERSION"

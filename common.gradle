@@ -41,6 +41,8 @@ dependencies {
 
     implementation HiltDependency.ANDROID
     kapt HiltDependency.ANDROID_COMPILER
+    implementation HiltDependency.LIFECYCLE_VIEWMODEL
+    kapt HiltDependency.COMPILER
 
     implementation RetrofitDependency.CONVERTER_MOSHI
     implementation RetrofitDependency.ADAPTER_RXJAVA3
