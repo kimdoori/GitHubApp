@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setupBinding()
+        setupRecyclerView()
     }
 
     private fun setupBinding() {
@@ -27,5 +28,9 @@ class MainActivity : AppCompatActivity() {
                 lifecycleOwner = this@MainActivity
                 viewModel = this@MainActivity.viewModel
             }
+    }
+
+    private fun setupRecyclerView() {
+        binding.mainRepoRecyclerView.adapter = GitHubRepoAdapter()
     }
 }
