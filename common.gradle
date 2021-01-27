@@ -37,7 +37,7 @@ dependencies {
     implementation AndroidXDependency.CORE_KTX
     implementation AndroidXDependency.APPCOMPAT
 
-    implementation RxJavaDependency.RXJAVA
+    implementation RxJavaDependency.RX_ANDROID
 
     implementation HiltDependency.HILT
     kapt HiltDependency.COMPILER
