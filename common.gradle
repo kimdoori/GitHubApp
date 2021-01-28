@@ -34,9 +34,6 @@ android {
 dependencies {
     implementation KotlinDependency.KOTLIN_STDLIB
 
-    implementation AndroidXDependency.CORE_KTX
-    implementation AndroidXDependency.APPCOMPAT
-
     implementation RxJavaDependency.RX_ANDROID
 
     implementation HiltDependency.ANDROID

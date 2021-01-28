@@ -20,11 +20,10 @@ object KotlinDependency {
 }
 
 object AndroidXDependency {
-    const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0"
     const val CORE_KTX = "androidx.core:core-ktx:1.3.2"
     const val ACTIVITY_KTX = "androidx.activity:activity-ktx:1.2.0-beta01"
     const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.2.0"
-    const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
+    const val MATERIAL = "com.google.android.material:material:1.3.0-rc01"
 }
 
 object HiltDependency {
