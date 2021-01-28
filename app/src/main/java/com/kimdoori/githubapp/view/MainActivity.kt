@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        binding.mainRepoRecyclerView.adapter = GitHubRepoAdapter()
+        binding.mainRepoRecyclerview.adapter = GitHubRepoAdapter()
     }
 
     private fun showContent() {

@@ -19,7 +19,7 @@
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_repoRecyclerView"
+            android:id="@+id/main_repo_recyclerview"
             bind_items="@{viewModel.gitHubRepoList}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
