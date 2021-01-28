@@ -1,25 +1,41 @@
 package com.kimdoori.githubapp.viewcommon
 
+import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseAdapter<ITEM_TYPE : Any> : RecyclerView.Adapter<BaseViewHolder<ITEM_TYPE>>() {
+class BaseAdapter<T>(
+    @LayoutRes private val layoutResourceId: Int,
+    private val bindingVariableId: Int,
+) : RecyclerView.Adapter<BaseViewHolder<T>>() {
 
-    private val items = mutableListOf<ITEM_TYPE>()
+    private val items = mutableListOf<T>()
 
     override fun getItemCount(): Int = items.size
 
     override fun getItemId(position: Int): Long = position.toLong()
 
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BaseViewHolder<T> = BaseViewHolder(
+        layoutResourceId = layoutResourceId,
+        parent = parent,
+        bindingVariableId = bindingVariableId,
+    )
+
     override fun onBindViewHolder(
-        holder: BaseViewHolder<ITEM_TYPE>,
+        holder: BaseViewHolder<T>,
         position: Int
     ) {
         holder.bind(items[position])
     }
 
-    open fun replaceItems(items: List<ITEM_TYPE>) {
-        this.items.clear()
-        this.items.addAll(items)
+    fun replaceItems(new_items: List<T>) {
+        items.run {
+            clear()
+            addAll(new_items)
+        }
         notifyDataSetChanged()
     }
 }

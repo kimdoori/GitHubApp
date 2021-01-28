@@ -6,19 +6,20 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.kimdoori.githubapp.BR
 
-open class BaseViewHolder<ITEM_TYPE : Any>(
+class BaseViewHolder<T>(
     @LayoutRes layoutResourceId: Int,
     parent: ViewGroup,
-    private val bindingVariableId: Int = BR.item
+    private val bindingVariableId: Int,
 ) : RecyclerView.ViewHolder(
-    LayoutInflater.from(parent.context).inflate(layoutResourceId, parent, false)
+    LayoutInflater
+        .from(parent.context)
+        .inflate(layoutResourceId, parent, false)
 ) {
 
     private val binding: ViewDataBinding = DataBindingUtil.bind(itemView)!!
 
-    open fun bind(item: ITEM_TYPE) {
+    fun bind(item: T) {
         binding.setVariable(bindingVariableId, item)
     }
 }
