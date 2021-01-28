@@ -23,13 +23,19 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesMoshiConverterFactory(): MoshiConverterFactory =
-        MoshiConverterFactory.create(
-            Moshi
-                .Builder()
-                .addLast(KotlinJsonAdapterFactory())
-                .build()
-        )
+    fun providesKotlinJsonAdapterFactory(): KotlinJsonAdapterFactory = KotlinJsonAdapterFactory()
+
+    @Provides
+    @Singleton
+    fun providesMoshi(kotlinJsonAdapterFactory: KotlinJsonAdapterFactory): Moshi = Moshi
+        .Builder()
+        .addLast(kotlinJsonAdapterFactory)
+        .build()
+
+    @Provides
+    @Singleton
+    fun providesMoshiConverterFactory(moshi: Moshi): MoshiConverterFactory =
+        MoshiConverterFactory.create(moshi)
 
     @Provides
     @Singleton

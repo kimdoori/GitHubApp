@@ -5,6 +5,5 @@ plugins {
 apply from: "$rootDir/common.gradle"
 
 dependencies {
-    implementation MoshiDependency.MOSHI_KOTLIN
     implementation RetrofitDependency.RETROFIT
 }
