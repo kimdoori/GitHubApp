@@ -1,5 +1,7 @@
 package com.kimdoori.githubapp.data.di
 
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,7 +23,19 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesMoshiConverterFactory(): MoshiConverterFactory = MoshiConverterFactory.create()
+    fun providesKotlinJsonAdapterFactory(): KotlinJsonAdapterFactory = KotlinJsonAdapterFactory()
+
+    @Provides
+    @Singleton
+    fun providesMoshi(kotlinJsonAdapterFactory: KotlinJsonAdapterFactory): Moshi = Moshi
+        .Builder()
+        .addLast(kotlinJsonAdapterFactory)
+        .build()
+
+    @Provides
+    @Singleton
+    fun providesMoshiConverterFactory(moshi: Moshi): MoshiConverterFactory =
+        MoshiConverterFactory.create(moshi)
 
     @Provides
     @Singleton

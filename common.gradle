@@ -34,13 +34,14 @@ android {
 dependencies {
     implementation KotlinDependency.KOTLIN_STDLIB
 
-    implementation AndroidXDependency.CORE_KTX
-    implementation AndroidXDependency.APPCOMPAT
+    implementation RxJavaDependency.RX_ANDROID
 
-    implementation RxJavaDependency.RXJAVA
-
-    implementation HiltDependency.HILT
+    implementation HiltDependency.ANDROID
+    kapt HiltDependency.ANDROID_COMPILER
+    implementation HiltDependency.LIFECYCLE_VIEWMODEL
     kapt HiltDependency.COMPILER
+
+    implementation MoshiDependency.MOSHI_KOTLIN
 
     implementation RetrofitDependency.CONVERTER_MOSHI
     implementation RetrofitDependency.ADAPTER_RXJAVA3

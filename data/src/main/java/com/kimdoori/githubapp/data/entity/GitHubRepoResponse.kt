@@ -8,6 +8,6 @@ data class GitHubRepoResponse(
     @Json(name = "id") val id: Int,
     @Json(name = "name") val name: String,
     @Json(name = "full_name") val fullName: String,
-    @Json(name = "description") val description: String,
+    @Json(name = "description") val description: String?,
     @Json(name = "url") val url: String
 )
