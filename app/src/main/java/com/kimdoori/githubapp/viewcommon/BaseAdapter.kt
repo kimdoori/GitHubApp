@@ -31,10 +31,10 @@ class BaseAdapter<T>(
         holder.bind(items[position])
     }
 
-    fun replaceItems(new_items: List<T>) {
+    fun replaceItems(newItems: List<T>) {
         items.run {
             clear()
-            addAll(new_items)
+            addAll(newItems)
         }
         notifyDataSetChanged()
     }
