@@ -11,16 +11,21 @@ class MainViewModelImpl @ViewModelInject constructor(
 ) : MainViewModel() {
 
     override val gitHubRepoList = MutableLiveData<List<GitHubRepoModel>>()
+    override val loading = MutableLiveData<Boolean>()
 
     override fun fetchGitHubRepoList(userName: String) {
+        loading.value = true
         gitHubRepoUseCase
             .fetchGitHubRepoList(userName = userName)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 {
                     gitHubRepoList.value = it
+                    loading.value = false
                 },
-                { }
+                {
+                    loading.value = false
+                }
             )
     }
 }
