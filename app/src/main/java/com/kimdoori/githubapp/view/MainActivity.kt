@@ -3,6 +3,7 @@ package com.kimdoori.githubapp.view
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import com.kimdoori.githubapp.BR
 import com.kimdoori.githubapp.R
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         setupBinding()
         setupRecyclerView()
-        showContent()
+        setupListener()
     }
 
     private fun setupBinding() {
@@ -41,7 +42,18 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun showContent() {
-        viewModel.fetchGitHubRepoList(userName = "kimdoori")
+    private fun setupListener() {
+        binding.mainRepoSearchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (query != null) {
+                    viewModel.fetchGitHubRepoList(userName = query)
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return true
+            }
+        })
     }
 }
