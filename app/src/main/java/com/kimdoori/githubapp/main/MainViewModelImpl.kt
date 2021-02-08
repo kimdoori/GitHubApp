@@ -2,14 +2,13 @@ package com.kimdoori.githubapp.main
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.kimdoori.githubapp.domain.model.GitHubRepoModel
 import com.kimdoori.githubapp.domain.usecase.GitHubRepoUseCase
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 
 class MainViewModelImpl @ViewModelInject constructor(
     private val gitHubRepoUseCase: GitHubRepoUseCase
-) : MainViewModel, ViewModel() {
+) : MainViewModel() {
 
     override val gitHubRepoList = MutableLiveData<List<GitHubRepoModel>>()
     override val loading = MutableLiveData<Boolean>()

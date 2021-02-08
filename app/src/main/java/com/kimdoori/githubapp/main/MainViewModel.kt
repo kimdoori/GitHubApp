@@ -1,12 +1,13 @@
 package com.kimdoori.githubapp.main
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import com.kimdoori.githubapp.domain.model.GitHubRepoModel
 
-interface MainViewModel {
+abstract class MainViewModel : ViewModel() {
 
-    val gitHubRepoList: LiveData<List<GitHubRepoModel>>
-    val loading: LiveData<Boolean>
+    protected abstract val gitHubRepoList: LiveData<List<GitHubRepoModel>>
+    protected abstract val loading: LiveData<Boolean>
 
-    fun fetchGitHubRepoList(userName: String)
+    abstract fun fetchGitHubRepoList(userName: String)
 }
