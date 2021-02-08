@@ -1,4 +1,4 @@
-package com.kimdoori.githubapp.viewmodel
+package com.kimdoori.githubapp.main
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData

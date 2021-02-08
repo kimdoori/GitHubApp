@@ -1,4 +1,4 @@
-package com.kimdoori.githubapp.binding_adapter
+package com.kimdoori.githubapp.binding
 
 import android.view.View
 import androidx.core.view.isVisible

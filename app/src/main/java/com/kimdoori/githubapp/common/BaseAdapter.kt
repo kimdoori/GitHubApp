@@ -1,4 +1,4 @@
-package com.kimdoori.githubapp.viewcommon
+package com.kimdoori.githubapp.common
 
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes

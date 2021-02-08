@@ -1,4 +1,4 @@
-package com.kimdoori.githubapp.view
+package com.kimdoori.githubapp.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -9,8 +9,7 @@ import com.kimdoori.githubapp.BR
 import com.kimdoori.githubapp.R
 import com.kimdoori.githubapp.databinding.ActivityMainBinding
 import com.kimdoori.githubapp.domain.model.GitHubRepoModel
-import com.kimdoori.githubapp.viewcommon.BaseAdapter
-import com.kimdoori.githubapp.viewmodel.MainViewModelImpl
+import com.kimdoori.githubapp.common.BaseAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
