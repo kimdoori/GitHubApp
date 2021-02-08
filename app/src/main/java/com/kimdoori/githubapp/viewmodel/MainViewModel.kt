@@ -6,8 +6,8 @@ import com.kimdoori.githubapp.domain.model.GitHubRepoModel
 
 abstract class MainViewModel : ViewModel() {
 
-    abstract val gitHubRepoList: LiveData<List<GitHubRepoModel>>
-    abstract val loading: LiveData<Boolean>
+    protected abstract val gitHubRepoList: LiveData<List<GitHubRepoModel>>
+    protected abstract val loading: LiveData<Boolean>
 
     abstract fun fetchGitHubRepoList(userName: String)
 }
