@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GitHubApp</string>
+    <string name="username_search_hint">Please enter the username.</string>
 </resources>

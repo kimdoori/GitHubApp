@@ -7,26 +7,55 @@
 
         <variable
             name="viewModel"
-            type="com.kimdoori.githubapp.viewmodel.MainViewModel" />
+            type="com.kimdoori.githubapp.main.MainViewModel" />
 
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="10dp"
-        android:background="@color/colorWhite"
-        android:orientation="vertical">
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/main_repo_searchview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="@string/username_search_hint"
+            app:theme="@style/SearchViewStyle" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/main_repo_recyclerview"
             bind_items="@{viewModel.gitHubRepoList}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_repo_searchview"
+            app:layout_constraintVertical_bias="0"
             tools:itemCount="5"
             tools:listitem="@layout/item_repo" />
 
-    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/main_progressbar"
+            bind_visibility="@{viewModel.loading}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progress_circle_bar"
+            android:indeterminateDuration="1000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

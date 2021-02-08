@@ -1,28 +1,28 @@
-package com.kimdoori.githubapp.view
+package com.kimdoori.githubapp.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import com.kimdoori.githubapp.BR
 import com.kimdoori.githubapp.R
 import com.kimdoori.githubapp.databinding.ActivityMainBinding
 import com.kimdoori.githubapp.domain.model.GitHubRepoModel
-import com.kimdoori.githubapp.viewcommon.BaseAdapter
-import com.kimdoori.githubapp.viewmodel.MainViewModel
+import com.kimdoori.githubapp.common.BaseAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: MainViewModelImpl by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setupBinding()
         setupRecyclerView()
-        showContent()
+        setupListener()
     }
 
     private fun setupBinding() {
@@ -41,7 +41,18 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun showContent() {
-        viewModel.fetchGitHubRepoList(userName = "kimdoori")
+    private fun setupListener() {
+        binding.mainRepoSearchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (query != null) {
+                    viewModel.fetchGitHubRepoList(userName = query)
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return true
+            }
+        })
     }
 }

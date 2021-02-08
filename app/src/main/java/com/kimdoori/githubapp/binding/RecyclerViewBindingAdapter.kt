@@ -1,8 +1,8 @@
-package com.kimdoori.githubapp.binding_adapter
+package com.kimdoori.githubapp.binding
 
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kimdoori.githubapp.viewcommon.BaseAdapter
+import com.kimdoori.githubapp.common.BaseAdapter
 
 @BindingAdapter("bind_items")
 fun setItems(recyclerView: RecyclerView, items: List<Any>?) {
