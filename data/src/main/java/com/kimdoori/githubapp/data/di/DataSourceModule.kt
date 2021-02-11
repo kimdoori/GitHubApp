@@ -1,8 +1,6 @@
 package com.kimdoori.githubapp.data.di
 
-import com.kimdoori.githubapp.data.remote.GitHubRepoRemoteDataSource
-import com.kimdoori.githubapp.data.remote.GitHubRepoRemoteDataSourceImpl
-import com.kimdoori.githubapp.data.remote.GitHubRepoService
+import com.kimdoori.githubapp.data.remote.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,4 +17,11 @@ class DataSourceModule {
         gitHubRepoService: GitHubRepoService
     ): GitHubRepoRemoteDataSource =
         GitHubRepoRemoteDataSourceImpl(gitHubRepoService = gitHubRepoService)
+
+    @Provides
+    @Singleton
+    fun providesPullRequestRemoteDataSource(
+        pullRequestService: PullRequestService
+    ): PullRequestRemoteDataSource =
+        PullRequestRemoteDataSourceImpl(pullRequestService = pullRequestService)
 }
