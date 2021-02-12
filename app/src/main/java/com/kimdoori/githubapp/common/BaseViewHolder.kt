@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
-class BaseViewHolder<T>(
+open class BaseViewHolder<T>(
     @LayoutRes layoutResourceId: Int,
     parent: ViewGroup,
     private val bindingVariableId: Int,
@@ -17,9 +17,9 @@ class BaseViewHolder<T>(
         .inflate(layoutResourceId, parent, false)
 ) {
 
-    private val binding: ViewDataBinding = DataBindingUtil.bind(itemView)!!
+    val binding: ViewDataBinding = DataBindingUtil.bind(itemView)!!
 
-    fun bind(item: T) {
+    open fun bind(item: T) {
         binding.setVariable(bindingVariableId, item)
     }
 }
