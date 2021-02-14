@@ -10,7 +10,7 @@ data class PullRequestModel(
     val url: String,
     val htmlUrl: String,
     val assignee: UserModel? = null,
-    val requestedReviewers: List<UserModel?>? = null,
+    val requestedReviewers: List<UserModel> = emptyList(),
     val issueUrl: String? = null,
 ) {
     companion object {
@@ -24,7 +24,8 @@ data class PullRequestModel(
             assignee = pullRequestResponse.assignee?.let(UserModel::mapFromEntity),
             requestedReviewers = pullRequestResponse.requestedReviewers
                 ?.filterNotNull()
-                ?.map(UserModel::mapFromEntity),
+                ?.map(UserModel::mapFromEntity)
+                ?: emptyList(),
             issueUrl = pullRequestResponse.issueUrl,
         )
     }
