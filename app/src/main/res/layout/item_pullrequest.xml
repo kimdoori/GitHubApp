@@ -6,12 +6,11 @@
 
         <variable
             name="item"
-            type="com.kimdoori.githubapp.domain.model.GitHubRepoModel" />
+            type="com.kimdoori.githubapp.domain.model.PullRequestModel" />
 
     </data>
 
     <LinearLayout
-        android:id="@+id/item_repo_root_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
@@ -23,18 +22,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:text="@{item.name}"
+            android:text="@{item.title}"
             android:textColor="@color/colorBlack"
             android:textStyle="bold"
-            tools:text="GitHubApp" />
+            tools:text="This is first PR" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:text="@{item.description}"
+            android:text="@{item.body}"
             android:textColor="@color/colorBlack"
-            tools:text="This is my repository" />
+            tools:text="blahblah" />
 
         <TextView
             android:layout_width="wrap_content"
