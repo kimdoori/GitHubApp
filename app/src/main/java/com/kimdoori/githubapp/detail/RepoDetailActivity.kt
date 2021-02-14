@@ -41,9 +41,8 @@ class RepoDetailActivity : AppCompatActivity() {
     }
 
     private fun showContent() {
-        val userName = intent.getStringExtra(EXTRA_USER_NAME)
-        val repoName = intent.getStringExtra(EXTRA_REPO_NAME)
-        if (userName == null || repoName == null) return
+        val userName = intent.getStringExtra(EXTRA_USER_NAME) ?: return
+        val repoName = intent.getStringExtra(EXTRA_REPO_NAME) ?: return
         viewModel.fetchPullRequestList(userName = userName, repoName = repoName)
     }
 
