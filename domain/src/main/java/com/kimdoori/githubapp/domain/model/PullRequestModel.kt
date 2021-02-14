@@ -21,10 +21,10 @@ data class PullRequestModel(
             state = pullRequestResponse.state,
             url = pullRequestResponse.url,
             htmlUrl = pullRequestResponse.htmlUrl,
-            assignee = pullRequestResponse.assignee?.let { UserModel.mapFromEntity(it) },
+            assignee = pullRequestResponse.assignee?.let(UserModel::mapFromEntity),
             requestedReviewers = pullRequestResponse.requestedReviewers
                 ?.filterNotNull()
-                ?.map { UserModel.mapFromEntity(it) },
+                ?.map(UserModel::mapFromEntity),
             issueUrl = pullRequestResponse.issueUrl,
         )
     }
