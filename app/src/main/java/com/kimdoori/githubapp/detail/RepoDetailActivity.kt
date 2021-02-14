@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class RepoDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRepoDetailBinding
-    private val viewModel: RepoDetailViewModelImpl by viewModels()
+    private val viewModel: RepoDetailViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
