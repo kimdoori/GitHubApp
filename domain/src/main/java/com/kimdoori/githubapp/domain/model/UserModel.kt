@@ -7,9 +7,9 @@ data class UserModel(
     val login: String,
 ) {
     companion object {
-        fun mapFromEntity(userReponse: UserResponse) = UserModel(
-            id = userReponse.id,
-            login = userReponse.login,
+        fun mapFromEntity(userResponse: UserResponse) = UserModel(
+            id = userResponse.id,
+            login = userResponse.login,
         )
     }
 }
