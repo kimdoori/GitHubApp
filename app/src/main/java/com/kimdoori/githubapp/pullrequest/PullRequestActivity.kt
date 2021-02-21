@@ -17,17 +17,19 @@ class PullRequestActivity : AppCompatActivity() {
     }
 
     private fun setupBinding() {
-        binding = DataBindingUtil.setContentView<ActivityPullrequestBinding>(
-            this, R.layout.activity_pullrequest
-        ).apply {
-            lifecycleOwner = this@PullRequestActivity
-        }
+        binding = DataBindingUtil
+            .setContentView<ActivityPullrequestBinding>(this, R.layout.activity_pullrequest)
+            .apply {
+                lifecycleOwner = this@PullRequestActivity
+            }
     }
 
     private fun setupWebView() {
-        intent.getStringExtra(EXTRA_PULL_REQUEST_URL)?.let {
-            binding.pullRequestWebview.loadUrl(it)
-        }
+        intent
+            .getStringExtra(EXTRA_PULL_REQUEST_URL)
+            ?.let {
+                binding.pullRequestWebview.loadUrl(it)
+            }
     }
 
     companion object {
