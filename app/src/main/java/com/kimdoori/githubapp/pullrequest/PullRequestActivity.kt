@@ -18,7 +18,7 @@ class PullRequestActivity : AppCompatActivity() {
 
     private fun setupBinding() {
         binding = DataBindingUtil
-            .setContentView<ActivityPullrequestBinding>(this, R.layout.activity_pullrequest)
+            .setContentView<ActivityPullrequestBinding>(this, R.layout.activity_pull_request)
             .apply {
                 lifecycleOwner = this@PullRequestActivity
             }
