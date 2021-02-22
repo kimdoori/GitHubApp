@@ -18,7 +18,7 @@
         android:paddingHorizontal="10dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/repo_detail_pullrequest_recyclerview"
+            android:id="@+id/repo_detail_pull_request_recyclerview"
             bind_items="@{viewModel.pullRequestList}"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0"
             tools:itemCount="5"
-            tools:listitem="@layout/item_pullrequest" />
+            tools:listitem="@layout/item_pull_request" />
 
         <ProgressBar
             android:id="@+id/main_progressbar"
