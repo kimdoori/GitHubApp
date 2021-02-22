@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.kimdoori.githubapp.R
-import com.kimdoori.githubapp.databinding.ActivityPullrequestBinding
+import com.kimdoori.githubapp.databinding.ActivityPullRequestBinding
 
 class PullRequestActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityPullrequestBinding
+    private lateinit var binding: ActivityPullRequestBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class PullRequestActivity : AppCompatActivity() {
 
     private fun setupBinding() {
         binding = DataBindingUtil
-            .setContentView<ActivityPullrequestBinding>(this, R.layout.activity_pull_request)
+            .setContentView<ActivityPullRequestBinding>(this, R.layout.activity_pull_request)
             .apply {
                 lifecycleOwner = this@PullRequestActivity
             }

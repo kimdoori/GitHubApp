@@ -36,7 +36,7 @@ class RepoDetailActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        binding.repoDetailPullrequestRecyclerview.adapter = PullRequestAdapter(
+        binding.repoDetailPullRequestRecyclerview.adapter = PullRequestAdapter(
             layoutResourceId = R.layout.item_pull_request,
             bindingVariableId = BR.item,
             onClick = { pullRequestUrl ->
