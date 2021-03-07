@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">GitHubApp</string>
     <string name="username_search_hint">Please enter the username.</string>
+    <string name="empty_response">조회된 결과가 없습니다.</string>
 </resources>
